@@ -1,8 +1,8 @@
 # Lab 1: Node.js and Express server
 
-**Student Name:** [Your Name] · **Registration Number:** [Your Registration Number] · **Section:** [Your Section]  
+**Student Name:** R SATHYANARAYANA · **Registration Number:** 252U1R1209 · **Section:** CSE-2D(214)  
 **Course:** Backend Development Fundamentals (Year II Term II) · **Faculty:** Joel Prashanth D · **Institution:** Aurora  
-**Live Link:** [https://lab-1-express-server.onrender.com](https://lab-1-express-server.onrender.com) *(Update with your live Render/Railway URL if deployed, or state 'Local environment only')*
+**Live Link:** [https://backend-dev-fundamentals.vercel.app](https://backend-dev-fundamentals.vercel.app)
 
 ---
 

@@ -19,9 +19,9 @@ app.get('/', (req, res) => {
 // Task 5: Route 2 - GET /about (JSON with name and section)
 app.get('/about', (req, res) => {
   res.status(200).json({
-    name: process.env.STUDENT_NAME || 'Your Name',
-    regNo: process.env.STUDENT_REG_NO || 'Your Reg Number',
-    section: process.env.STUDENT_SECTION || 'Your Section',
+    name: process.env.STUDENT_NAME || 'R SATHYANARAYANA',
+    regNo: process.env.STUDENT_REG_NO || '252U1R1209',
+    section: process.env.STUDENT_SECTION || 'CSE-2D(214)',
     course: 'Backend Development Fundamentals',
     lab: 'Lab 1: Node.js and Express server'
   });
