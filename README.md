@@ -1,7 +1,7 @@
 # Lab 1: Node.js and Express server
 
 **Student Name:** R SATHYANARAYANA · **Registration Number:** 252U1R1209 · **Section:** CSE-2D(214)  
-**Course:** Backend Development Fundamentals (Year II Term II) · **Faculty:** Joel Prashanth D · **Institution:** Aurora  
+**Course:** Backend Development Fundamentals (Year II Term II) · **Faculty:** SAI SIVA TEJA · **Institution:** Aurora Deemed to be University  
 **Live Link:** [https://backend-dev-fundamentals.vercel.app](https://backend-dev-fundamentals.vercel.app)
 
 ---
