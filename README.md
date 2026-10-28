@@ -12,8 +12,7 @@
 3. [How to Run](#how-to-run)
 4. [Endpoints and Scripts](#endpoints-and-scripts)
 5. [Screenshots of Working Endpoints](#screenshots-of-working-endpoints)
-6. [Viva Questions & Answers](#viva-questions--answers)
-7. [Notes: Problems Faced & Solutions](#notes-problems-faced--solutions)
+6. [Notes: Problems Faced & Solutions](#notes-problems-faced--solutions)
 
 ---
 
@@ -121,22 +120,6 @@ STUDENT_SECTION=Your Section
 
 ### 6. Express Server: GET `/unknown-path` (404 Not Found Handling)
 ![GET 404 Route](screenshots/route_404.png)
-
----
-
-## 💬 Viva Questions & Answers
-
-### 1. What is the difference between `package.json` and `node_modules`?
-- **`package.json`**: It is a lightweight metadata file and project manifest. It contains project configuration, author information, scripts, and the exact names and semver versions of external dependencies needed by the project. It is checked into Git version control.
-- **`node_modules`**: It is the physical directory on disk containing the actual downloaded source code and binaries of all dependencies and their recursive sub-dependencies. Because it can be hundreds of megabytes in size, it is added to `.gitignore` and **never committed to version control**. Anyone can reconstruct `node_modules` by running `npm install` from `package.json`.
-
-### 2. What does `app.listen()` do?
-- In Express, `app.listen(port, [callback])` binds and listens for incoming HTTP connections on the specified network port (e.g., 3000).
-- Behind the scenes, Express invokes Node's built-in `http.createServer(this).listen(...)`, starting an asynchronous event loop that waits for incoming client socket requests and dispatches them to matching route handlers and middleware.
-
-### 3. What do `request` (`req`) and `response` (`res`) represent?
-- **`request` (`req`)**: An object representing the incoming HTTP request sent by the client (browser/Postman). It contains information such as HTTP method (`req.method`), URL path (`req.url`), route parameters (`req.params`), query parameters (`req.query`), headers (`req.headers`), and request body (`req.body`).
-- **`response` (`res`)**: An object representing the outgoing HTTP response that the server sends back to the client. It provides methods to set status codes (`res.status()`), set HTTP headers (`res.set()`), and transmit data back via `res.send()`, `res.json()`, or `res.end()`.
 
 ---
 
