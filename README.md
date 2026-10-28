@@ -6,7 +6,7 @@
 
 ---
 
-## 📖 Table of Contents
+## --> Table of Contents
 1. [Objective](#objective)
 2. [Explanation of package.json Fields](#explanation-of-packagejson-fields)
 3. [How to Run](#how-to-run)
@@ -16,12 +16,12 @@
 
 ---
 
-## 🎯 Objective
+## --> Objective
 Set up a Node.js project and build a modular web server, first using Node's built-in `http` module and then rewritten using the `Express` framework with routing, status code handling, and 404 fallback handling.
 
 ---
 
-## 📦 Explanation of `package.json` Fields
+## --> Explanation of `package.json` Fields
 When initializing a Node.js project with `npm init -y`, `package.json` is generated as the project manifest. Below is an explanation of every field:
 
 | Field | Purpose / Description |
@@ -39,7 +39,7 @@ When initializing a Node.js project with `npm init -y`, `package.json` is genera
 
 ---
 
-## 🚀 How to Run
+## --> How to Run
 
 ### 1. Prerequisites
 - **Node.js** (v18.x or later installed)
@@ -82,7 +82,7 @@ STUDENT_SECTION=CSE-2D(214)
 
 ---
 
-## 🌐 Endpoints and Scripts
+## --> Endpoints and Scripts
 
 ### Available NPM Scripts
 | Script Command | Description |
@@ -101,7 +101,7 @@ STUDENT_SECTION=CSE-2D(214)
 
 ---
 
-## 📸 Screenshots of Working Endpoints
+## --> Screenshots of Working Endpoints
 
 ### 1. Plain HTTP Server (`http.createServer`) - Replying "Hello SNR"
 ![Plain HTTP Server](screenshots/route_http_plain.png)
@@ -123,7 +123,7 @@ STUDENT_SECTION=CSE-2D(214)
 
 ---
 
-## 🛠️ Notes: Problems Faced & Solutions
+## --> Notes: Problems Faced & Solutions
 1. **Port Conflicts (`EADDRINUSE`)**:
    - *Problem:* Running both `http-server.js` and `index.js` simultaneously on port `3000` causes an `EADDRINUSE` error.
    - *Solution:* Used environment variable `PORT = process.env.PORT || 3000` allowing dynamic port assignment, and stopped the plain HTTP server process before starting the Express server.
