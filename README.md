@@ -111,7 +111,7 @@ STUDENT_SECTION=Your Section
 ![GET Root Route](screenshots/route_root.png)
 
 ### 3. Express Server: GET `/about` (JSON Student Details)
-![GET About Route](screenshots/route_about.png)
+![GET About Route](screenshots/route_about_details.png)
 
 ### 4. Express Server: GET `/date` (Getting Today's Date)
 ![GET Date Route](screenshots/route_date.png)
