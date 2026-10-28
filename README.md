@@ -49,7 +49,7 @@ When initializing a Node.js project with `npm init -y`, `package.json` is genera
 Clone the repository and install dependencies:
 ```bash
 # Clone the repository
-git clone https://github.com/snr2005/Backend-Development-Fundamentals.git
+git clone https://github.com/snr2005/Backend-Development-Fundamentals_SNR.git
 
 # Navigate to the lab folder
 cd lab-01
