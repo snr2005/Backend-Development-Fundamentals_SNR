@@ -49,7 +49,7 @@ When initializing a Node.js project with `npm init -y`, `package.json` is genera
 Clone the repository and install dependencies:
 ```bash
 # Clone the repository
-git clone <your-repository-url>
+git clone https://github.com/snr2005/Backend-Development-Fundamentals.git
 
 # Navigate to the lab folder
 cd lab-01
@@ -62,9 +62,9 @@ npm install
 Create a `.env` file in the root of `lab-01/` (optional, default fallbacks are provided in code):
 ```env
 PORT=3000
-STUDENT_NAME=Your Full Name
-STUDENT_REG_NO=Your Registration Number
-STUDENT_SECTION=Your Section
+STUDENT_NAME=R SATHYANARAYANA
+STUDENT_REG_NO=252U1R1209
+STUDENT_SECTION=CSE-2D(214)
 ```
 
 ### 4. Running the Servers
