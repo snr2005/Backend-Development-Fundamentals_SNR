@@ -14,7 +14,8 @@ app.get('/about', (request, response) => {
     name: 'R SATHYANARAYANA',
     regNo: '252U1R1209',
     section: 'CSE-2D(214)',
-    course: 'Backend Development Fundamentals'
+    course: 'Backend Development Fundamentals',
+    lab: 'Lab 1: Node.js and Express server'
   });
 });
 
@@ -26,10 +27,11 @@ app.get('/date', (request, response) => {
 
 // Route 4: Current date and time
 app.get('/time', (request, response) => {
-  const currentDate = new Date();
+  const now = new Date();
   response.json({
-    date: currentDate.toLocaleDateString(),
-    time: currentDate.toLocaleTimeString()
+    iso: now.toISOString(),
+    utc: now.toUTCString(),
+    local: now.toString()
   });
 });
 
@@ -37,7 +39,8 @@ app.get('/time', (request, response) => {
 app.use((request, response) => {
   response.status(404).json({
     error: 'Not Found',
-    message: 'The requested route does not exist.'
+    message: `The requested path '${request.originalUrl}' does not exist on this server.`,
+    statusCode: 404
   });
 });
 
