@@ -3,58 +3,47 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-// Request logger middleware to log method, path, and response status code (Task 7)
-app.use((req, res, next) => {
-  res.on('finish', () => {
-    console.log(`[LOG] ${req.method} ${req.originalUrl} - Status Code: ${res.statusCode}`);
-  });
-  next();
+// Route 1: Home (Welcome message)
+app.get('/', (request, response) => {
+  response.send('Welcome to the Lab 1 Express Web Server!');
 });
 
-// Task 5: Route 1 - GET / (welcome text)
-app.get('/', (req, res) => {
-  res.status(200).send('Welcome to the Lab 1 Express Web Server!');
-});
-
-// Task 5: Route 2 - GET /about (JSON with name and section)
-app.get('/about', (req, res) => {
-  res.status(200).json({
-    name: process.env.STUDENT_NAME || 'R SATHYANARAYANA',
-    regNo: process.env.STUDENT_REG_NO || '252U1R1209',
-    section: process.env.STUDENT_SECTION || 'CSE-2D(214)',
-    course: 'Backend Development Fundamentals',
-    lab: 'Lab 1: Node.js and Express server'
+// Route 2: Student details (JSON response)
+app.get('/about', (request, response) => {
+  response.json({
+    name: 'R SATHYANARAYANA',
+    regNo: '252U1R1209',
+    section: 'CSE-2D(214)',
+    course: 'Backend Development Fundamentals'
   });
 });
 
-// Task 5: Route 3 - GET /time (current date and time using new Date())
-app.get('/time', (req, res) => {
-  const now = new Date();
-  res.status(200).json({
-    iso: now.toISOString(),
-    utc: now.toUTCString(),
-    local: now.toString()
-  });
-});
-
-// Getting Today's Date (NxtWave slide format)
+// Route 3: Today's date (NxtWave slide format)
 app.get('/date', (request, response) => {
   let date = new Date();
   response.send(`Today's date is ${date}`);
 });
 
-// Task 6: Return a 404 message for any unknown path
-app.use((req, res) => {
-  res.status(404).json({
-    error: 'Not Found',
-    message: `The requested path '${req.originalUrl}' does not exist on this server.`,
-    statusCode: 404
+// Route 4: Current date and time
+app.get('/time', (request, response) => {
+  const currentDate = new Date();
+  response.json({
+    date: currentDate.toLocaleDateString(),
+    time: currentDate.toLocaleTimeString()
   });
 });
 
-// Task 4: Listen on port 3000
+// Route 5: Basic 404 handler for unknown paths
+app.use((request, response) => {
+  response.status(404).json({
+    error: 'Not Found',
+    message: 'The requested route does not exist.'
+  });
+});
+
+// Start the server
 app.listen(PORT, () => {
-  console.log(`Express server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
 
 module.exports = app;
